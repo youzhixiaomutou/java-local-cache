@@ -5,11 +5,11 @@
     <packaging>pom</packaging>
 
     <groupId>me.linxiaowei</groupId>
-    <artifactId>lin-boot</artifactId>
+    <artifactId>java-local-cache</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>lin-boot</name>
-    <description>lin-boot for dev</description>
+    <name>java-local-cache</name>
+    <description>java-local-cache</description>
 
     <properties>
         <java.version>1.8</java.version>
