@@ -14,7 +14,7 @@ public class GuavaTest {
     public static void main(String[] args) throws ExecutionException {
         Cache<Object, Object> cache = CacheBuilder.newBuilder().maximumSize(1000).expireAfterWrite(10, TimeUnit.MINUTES)
                 .build();
-        LoadingCache<String, String> lc = CacheBuilder.newBuilder().maximumSize(1000).expireAfterWrite(10, TimeUnit.MINUTES)
+        LoadingCache<String, String> lc = CacheBuilder.newBuilder().maximumSize(1000).expireAfterWrite(10, TimeUnit.MINUTES).recordStats()
                 .build(new CacheLoader<String, String>() {
                     @Override
                     public String load(String key) throws Exception {
@@ -22,6 +22,9 @@ public class GuavaTest {
                     }
                 });
         System.out.println(lc.get("1"));
+        lc.stats();
+        lc.put("d","d");
+        System.out.println(lc.stats());
     }
 
 }
