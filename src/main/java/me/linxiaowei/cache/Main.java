@@ -1,8 +1,6 @@
 package me.linxiaowei.cache;
 
 import com.google.common.cache.LoadingCache;
-import me.linxiaowei.cache.core.Cache;
-import me.linxiaowei.cache.core.CacheManager;
 
 import java.util.concurrent.ExecutionException;
 
